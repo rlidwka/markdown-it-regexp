@@ -17,6 +17,9 @@ new (require('remarkable'))()
     }
   ))
   .render("hello @user")
+
+// prints out:
+// <p>hello <a href="http://example.org/u/user">user</a></p>
 ```
 
 ## Fair warning:
