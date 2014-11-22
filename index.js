@@ -53,32 +53,32 @@ util.inherits(Plugin, Function)
 
 // function that registers plugin with remarkable
 Plugin.prototype.init = function(remarkable) {
-  var self = this
+  remarkable.inline.ruler.push(this.id, this.parse.bind(this))
 
-  // push an inline rule
-  remarkable.inline.ruler.push(self.id, function(state, silent) {
-    // slowwww... maybe use an advanced regexp engine for this
-    var match = self.regexp.exec(state.src.slice(state.pos))
-    if (!match) return false
+  remarkable.renderer.rules[this.id] = this.render.bind(this)
+}
 
-    // valid match found, now we need to advance cursor
-    state.pos += match[0].length
+Plugin.prototype.parse = function(state, silent) {
+  // slowwww... maybe use an advanced regexp engine for this
+  var match = this.regexp.exec(state.src.slice(state.pos))
+  if (!match) return false
 
-    // don't insert any tokens in silent mode
-    if (silent) return true
+  // valid match found, now we need to advance cursor
+  state.pos += match[0].length
 
-    state.push({
-      type  : self.id,
-      level : state.level,
-      match : match,
-    })
+  // don't insert any tokens in silent mode
+  if (silent) return true
 
-    return true
+  state.push({
+    type  : this.id,
+    level : state.level,
+    match : match,
   })
 
-  // add a renderer rule
-  remarkable.renderer.rules[self.id] = function(tokens, id, options, env) {
-    return self.replacer(tokens[id].match, stuff)
-  }
+  return true
+}
+
+Plugin.prototype.render = function(tokens, id, options, env) {
+  return this.replacer(tokens[id].match, stuff)
 }
 
