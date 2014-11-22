@@ -14,7 +14,8 @@
   
   "publishConfig" : { "registry" : "https://registry.npmjs.org/" },
 
-  "files"         : [ "LICENSE", "HISTORY.md", "README.md", "index.js" ],
+  "files"         : [ "LICENSE", "HISTORY.md", "README.md",
+                      "index.js", "utils.js" ],
 
   "license"       : "MIT"
 }

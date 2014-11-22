@@ -9,7 +9,7 @@ new (require('remarkable'))()
     /@(\w+)/,
 
     function(match, utils) {
-      var url = 'http://your.website.example.com/u/' + match[1]
+      var url = 'http://example.org/u/' + match[1]
 
       return '<a href="' + utils.escape(url) + '">'
            + utils.escape(match[1])
