@@ -1,7 +1,7 @@
 // example from README
 console.log(
   new (require('remarkable'))()
-    .use(require('./')(
+    .use(require('../')(
       /@(\w+)/,
 
       function(match, utils) {

@@ -2,7 +2,6 @@
   "name"          : "remarkable-regexp",
   "version"       : "0.2.0",
   "description"   : "plugin that makes regexp replacement simple",
-  "main"          : "index.js",
 
   "author"        : { "name"     : "Alex Kocharin",
                       "email"    : "alex@kocharin.ru" },
@@ -14,8 +13,7 @@
   
   "publishConfig" : { "registry" : "https://registry.npmjs.org/" },
 
-  "files"         : [ "LICENSE", "HISTORY.md", "README.md",
-                      "index.js", "utils.js" ],
+  "files"         : [ "LICENSE", "HISTORY.md", "README.md", "lib/*.js" ],
 
   "license"       : "MIT"
 }
