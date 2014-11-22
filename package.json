@@ -1,0 +1,20 @@
+{
+  "name"          : "remarkable-regexp",
+  "version"       : "0.1.0",
+  "description"   : "plugin that makes regexp replacement simple",
+  "main"          : "index.js",
+
+  "author"        : { "name"     : "Alex Kocharin",
+                      "email"    : "alex@kocharin.ru" },
+
+  "repository"    : { "type"     : "git",
+                      "url"      : "git://github.com/rlidwka/sinopia" },
+
+  "keywords"      : [ "remarkable-plugin" ],
+  
+  "publishConfig" : { "registry" : "https://registry.npmjs.org/" },
+
+  "files"         : [ "LICENSE", "HISTORY.md", "README.md", "index.js" ],
+
+  "license"       : "MIT"
+}
