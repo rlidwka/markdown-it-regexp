@@ -7,7 +7,7 @@
                       "email"    : "alex@kocharin.ru" },
 
   "repository"    : { "type"     : "git",
-                      "url"      : "git://github.com/rlidwka/sinopia" },
+                      "url"      : "git://github.com/rlidwka/remarkable-regexp" },
 
   "keywords"      : [ "remarkable-plugin" ],
   
