@@ -4,18 +4,25 @@ Make simple remarkable plugins easier.
 ## Usage:
 
 ```js
-new (require('remarkable'))()
-  .use(require('remarkable-regexp')(
-    /@(\w+)/,
+var Remarkable = require('remarkable')
+var Plugin     = require('remarkable-regexp')
 
-    function(match, utils) {
-      var url = 'http://example.org/u/' + match[1]
+var plugin = Plugin(
+  // regexp to match
+  /@(\w+)/,
 
-      return '<a href="' + utils.escape(url) + '">'
-           + utils.escape(match[1])
-           + '</a>'
-    }
-  ))
+  // this function will be called when something matches
+  function(match, utils) {
+    var url = 'http://example.org/u/' + match[1]
+
+    return '<a href="' + utils.escape(url) + '">'
+         + utils.escape(match[1])
+         + '</a>'
+  }
+)
+
+new Remarkable()
+  .use(plugin)
   .render("hello @user")
 
 // prints out:
