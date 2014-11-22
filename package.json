@@ -1,6 +1,6 @@
 {
   "name"          : "remarkable-regexp",
-  "version"       : "0.1.0",
+  "version"       : "0.2.0",
   "description"   : "plugin that makes regexp replacement simple",
   "main"          : "index.js",
 
