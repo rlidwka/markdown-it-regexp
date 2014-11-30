@@ -1,0 +1,19 @@
+# .gitignore contents
+.DS_Store*
+Icon?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.directory
+*~
+node_modules
+*.log
+*.gz
+coverage
+
+# other stuff
+.editorconfig
+.travis.yml
+Contributing.md
+test
