@@ -1,6 +1,6 @@
 {
   "name"          : "remarkable-regexp",
-  "version"       : "0.2.3",
+  "version"       : "0.2.4",
   "description"   : "plugin that makes regexp replacement simple",
 
   "author"        : { "name"     : "Alex Kocharin",
