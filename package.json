@@ -1,15 +1,15 @@
 {
-  "name"          : "remarkable-regexp",
-  "version"       : "0.2.4",
+  "name"          : "markdown-it-regexp",
+  "version"       : "0.4.0",
   "description"   : "plugin that makes regexp replacement simple",
 
   "author"        : { "name"     : "Alex Kocharin",
                       "email"    : "alex@kocharin.ru" },
 
   "repository"    : { "type"     : "git",
-                      "url"      : "git://github.com/rlidwka/remarkable-regexp" },
+                      "url"      : "git://github.com/rlidwka/markdown-it-regexp" },
 
-  "keywords"      : [ "remarkable-plugin" ],
+  "keywords"      : [ "markdown-it-plugin" ],
   
   "publishConfig" : { "registry" : "https://registry.npmjs.org/" },
 

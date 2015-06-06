@@ -1,11 +1,11 @@
 
-Make simple remarkable plugins easier.
+Make simple [markdown-it](https://github.com/markdown-it/markdown-it) plugins easier.
 
 ## Usage:
 
 ```js
-var Remarkable = require('remarkable')
-var Plugin     = require('remarkable-regexp')
+var md     = require('markdown-it')
+var Plugin = require('markdown-it-regexp')
 
 var plugin = Plugin(
   // regexp to match
@@ -21,7 +21,7 @@ var plugin = Plugin(
   }
 )
 
-new Remarkable()
+md()
   .use(plugin)
   .render("hello @user")
 
