@@ -29,6 +29,8 @@ md()
 // <p>hello <a href="http://example.org/u/user">user</a></p>
 ```
 
+[Live demo as jsfiddle](https://jsfiddle.net/arve0/nz0Lb6ox/).
+
 ## Fair warning:
 
 1. it could be slower than you expect
