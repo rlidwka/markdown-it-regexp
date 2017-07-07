@@ -35,4 +35,4 @@ md()
 
 1. it could be slower than you expect
 2. it is a draft, breaking changes might happen
-
+3. markdown-it only stop at certain character, then perform the regex match in this plugin. [markdown-it Development Recommendations](https://github.com/markdown-it/markdown-it/blob/master/docs/development.md)
