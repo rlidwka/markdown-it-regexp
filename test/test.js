@@ -4,7 +4,8 @@ console.log(
     .use(require('../')(
       /@(\w+)/,
 
-      function (match, utils) {
+      function (match, utils, env) {
+        if (!env.userExists(match[1])) return '@' + match[1];
         var url = 'http://example.org/u/' + match[1]
 
         return '<a href="' + utils.escape(url) + '">'
@@ -12,5 +13,12 @@ console.log(
              + '</a>'
       }
     ))
-    .render("hello @user")
+    .render(
+      "hello @user and @user2",
+      {
+        userExists: function (u) {
+          return u === "user"
+        }
+      }
+    )
 )
